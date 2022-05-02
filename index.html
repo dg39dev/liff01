@@ -48,6 +48,13 @@
     }
 
     async function shareMsg() {
+      await liff.shareTargetPicker([
+        {
+          type: "uri",
+          label: "WHAbit Official",
+          uri: "https://www.whabitofficial.com"
+        }
+      ])
     }
 
     function logOut() {
