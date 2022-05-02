@@ -51,15 +51,24 @@
     }
 
     function logOut() {
+      liff.logout()
+      window.location.reload()
     }
 
     function closed() {
+      liff.closeWindow()
     }
 
     async function scanCode() {
+      const result = await liff.scanCode()
+      document.getElementById("scanCode").append(result.value)
     }
 
     function openWindow() {
+      liff.openWindow({
+        url: "https://www.whabitofficial.com",
+        external: true
+      })
     }
 
     async function getFriendship() {
