@@ -50,9 +50,12 @@
     async function shareMsg() {
       await liff.shareTargetPicker([
         {
+         type: "action",
+         "action": {
           type: "uri",
           label: "WHAbit Official",
           uri: "https://www.whabitofficial.com"
+         }
         }
       ])
     }
